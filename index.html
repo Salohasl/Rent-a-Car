@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xml:lang="ru" lang="ru" class="">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+<meta name="HandheldFriendly" content="true" >
+<meta name="MobileOptimized" content="width">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Mix Rent - Прокат автомобилей</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="bravecto, bravecto для собак, бравекто, бравекто для собак, бравекто для собак 20, бравекто для собак 20 40, бравекто для собак 20 40 кг, бравекто для собак 40, бравекто для собак кг купить, бравекто для собак купить, бравекто для собак купить 20, бравект" />
+<meta name="description" content="Mix Rent - Прокат автомобилей" />
+<link rel="icon" href="/icon/logo.png" type="image/png">
+<link rel="stylesheet" href="/style/style.css">
+<link rel="stylesheet" href="/style/media.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Black+Ops+One&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <a href="/index.html"><img src="/icon/logo.png" alt="" width="90px"></a>
+      </div>
+        <nav>
+          <ul>
+            <a href="#"><li>Аренда авто</li></a>
+            <a href="#"><li>Условия проката</li></a>
+            <a href="#"><li>Контакты</li></a>
+            <div class="link">
+              <a href="#"><li>О компании</li></a>
+              <div class="link-show">
+                <a href=""><li>Политика</li></a>
+                <a href=""><li>FAQ</li></a>
+              </div>
+            </div>
+            <a href="tel:+79527956805">+7(952)795-68-05</a>
+          </ul>
+        </nav>
+        <a href="#"><button>Авто</button></a>
+    </header>
+    <main>
+      <div class="fon"></div>
+       <div class="home">
+          <div class="home-text">
+            <h2>Аренда авто
+              <br>в Калининграде
+            </h2>
+            <p>от компании MIX RENT</p>
+            <button class="openForm"text="Срочно нужна машина?" hover-text="Оформим за 10 минут"></button>
+          </div>
+          <div class="home-img">
+            <img class="doroga" src="/img/doroga.jpg" alt="">
+            <img class="car" src="/img/fonHome.png" alt="">
+          </div>
+       </div>
+
+       <div class="container">
+        <div class="form-container form__wrapper">
+          <div class="close">
+            <div></div>
+            <div></div>
+          </div>
+          <h3>Срочно нужна машина?
+            <br>  Оставьте номер телефона!</h3>
+            <p>Наш менеджер свяжется c Вами в течение 10 минут и мы подберем оптимальный вариант автомобиля</p>
+          <!-- Форма обратной связи -->
+          <form id="feedback-form" action="/feedback/form-processing.php" enctype="multipart/form-data" novalidate>
+            <div class="form-row">
+              <!-- Имя пользователя -->
+              <div class="form-group">
+      
+                <input id="name" type="text" name="name" class="form-control" value="" placeholder="Имя" minlength="2"
+                  maxlength="30" required="required">
+                <div class="invalid-feedback"></div>
+              </div>
+                <!-- Телефон -->
+                <div class="form-group">
+   
+                  <div class="input-group">
+                  <input id="phone" type="tel" name="phone" class="form-control style_input phone_mask" placeholder="Введите телефон" value="" required="required" autocomplete="off">
+                  <div class="invalid-feedback"></div>
+                  </div>
+              </div>
+            </div>
+    
+    
+            <!-- Сообщение об ошибке -->
+            <div class="form-error form-error_hide" style="display: none;">Исправьте данные и отправьте форму ещё раз.</div>
+    
+            <!-- Кнопка для отправки формы на сервер -->
+            <div class="form-submit">
+              <button type="submit">Забронировать</button>
+            </div>
+    
+          </form>
+    
+          <!-- Сообщение об успешной отправки формы -->
+          <div class="form-success form-success_hide" style="display: none;">
+            <div class="form-success__message">Форма успешно отправлена. Нажмите <button type="button"
+                class="form-success__btn">здесь</button>, если нужно отправить ещё одну форму.</div>
+          </div>
+    
+        </div>
+    
+      </div>
+
+      <div class="catalog">
+        <div class="catalog-about">
+          <h2>Наши автомобили</h2>
+          <a href="#"><div class="catalog-about__more">
+            <p>Количество доступных машин: <span class="numberOfCars"></span></p>
+          </div></a>
+        </div>
+        <div class="catalog-auto">
+
+        </div>
+      </div>
+
+      <div class="advantages">
+        <div class="line"> </div>
+        <div class="advantages__text">
+            <h2>Гибкая система скидок</h2>
+            <p>Вы найдете выгодные предложения на прокат любых автомобилей — от практичных семейных внедорожников до роскошных автомобилей люкс класса</p>
+        </div>
+        <div class="line"> </div>
+        <div class="advantages__text">
+            <h2>Комфорт и удобство</h2>
+            <p>Вы получаете полностью укомплектованный, застрахованный автомобиль (кондиционер, штатная аудиосистема, сезонная резина, набор Pit Stop)</p>
+        </div>
+        <div class="line"> </div>
+        <div class="advantages__text">
+            <h2>Работаем по договору</h2>
+            <p>Для заключения договора можно отправить электронные копии документов через интернет или мессенджер.Предоставим все необходимые отчетные документы</p>
+        </div>
+        <div class="line"> </div>
+        <div class="advantages__text">
+            <h2>Страховка на случай ДТП</h2>
+            <p>Все автомобили застрахованы на условиях покрытия ущерба ОГПО и КАСКО.Техническая поддержка 24 часа в сутки 7 дней в неделю. Гибкая система скидок. Комфорти удобство.Работаем по договору. Страховка на случай ДТП</p>
+        </div>
+    </div>
+    <div class="conditions">
+        <div class="conditions__text"> 
+            <h2>Выберите автомобиль</h2>
+            <p>В нашем автопарке представлен широкий ассортимент автомобилей на любой вкус и кошелек</p>
+        </div>
+        <div class="conditions__text">
+            <h2>Укажите сроки аренды</h2>
+            <p>Укажите дату взятия и возврата машины на стоянку</p>
+        </div>
+        <div class="conditions__text">
+            <h2>Выберите место аренды</h2>
+            <p>Место, где вам удобно было бы забрать и вернуть авто, например, аэропорт</p>
+        </div>
+        <div class="conditions__text"> 
+            <h2>Дополнительные опции</h2>
+            <p>По желанию доступно: детское кресло, GPS или услуги водителя</p>
+        </div>
+    </div>
+
+    </main>
+    <footer>
+        
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.js" type="text/javascript"></script>
+
+<script src="/feedback/js/form-processing.js"></script>
+<script>
+  $(".phone_mask").mask("+7(999)999-99-99");
+  /*
+    attachMaxItems: 3,
+    attachMaxFileSize: 128,
+    attachExt: ['png', 'jpg']
+  */
+
+  document.querySelectorAll('form').forEach((el) => {
+    ItcSubmitForm.getOrCreateInstance(el);
+  })
+
+  document.addEventListener('itc.successSendForm', (e) => {
+    const el = e.target.closest('.form-container').querySelector('.form-success');
+    el.classList.remove('form-success_hide');
+  });
+
+  // при клике на .form-success__btn
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.form-success__btn')) {
+      return;
+    }
+    const el = e.target.closest('.form-container').querySelector('form');
+    const form = ItcSubmitForm.getOrCreateInstance(el);
+    form.reset();
+    e.target.closest('.form-container').querySelector('.form-success').classList.add('form-success_hide');
+  });
+</script>
+<script type="module" src="/script/index.js"></script>
+<script src="/script/animation.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.js" integrity="sha512-bvxXT2u2PNVKMpHmLR54QQ+qAnhn0dM//5spHP+sjRcnlZSmNMaLkvZXAr8peMHyNlUoDEgNnYIlrUTnr5kNYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

@@ -9,7 +9,7 @@
 <title>Mix Rent - Прокат автомобилей</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="robots" content="index, follow" />
-<meta name="keywords" content="bravecto, bravecto для собак, бравекто, бравекто для собак, бравекто для собак 20, бравекто для собак 20 40, бравекто для собак 20 40 кг, бравекто для собак 40, бравекто для собак кг купить, бравекто для собак купить, бравекто для собак купить 20, бравект" />
+<meta name="keywords" content="" />
 <meta name="description" content="Mix Rent - Прокат автомобилей" />
 <link rel="icon" href="/icon/logo.png" type="image/png">
 <link rel="stylesheet" href="/style/style.css">
@@ -17,96 +17,93 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Black+Ops+One&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Black+Ops+One&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
       <div class="logo">
-        <a href="/index.html"><img src="/icon/logo.png" alt="" width="90px"></a>
+        <a href="/index.html"><img src="/icon/logo.png" alt="" width="110px"></a>
       </div>
         <nav>
           <ul>
-            <a href="#"><li>Аренда авто</li></a>
-            <a href="#"><li>Условия проката</li></a>
+            <a href="#catalog" class="link" data-num="1"><li>Аренда авто</li></a>
+            <a href="#conditions" class="link" data-num="2"><li>Условия проката</li></a>
             <a href="#"><li>Контакты</li></a>
             <div class="link">
               <a href="#"><li>О компании</li></a>
               <div class="link-show">
                 <a href=""><li>Политика</li></a>
-                <a href=""><li>FAQ</li></a>
+                <a href="#faq" class="link" data-num="3"><li>FAQ</li></a>
               </div>
             </div>
             <a href="tel:+79527956805">+7(952)795-68-05</a>
           </ul>
         </nav>
-        <a href="#"><button>Авто</button></a>
+        <a href="#"><button>Забронировать</button></a>
     </header>
     <main>
-      <div class="fon"></div>
+     
        <div class="home">
           <div class="home-text">
-            <h2>Аренда авто
-              <br>в Калининграде
-            </h2>
+            <h2>Прокат автомобилей
+              в Калининграде</h2>
             <p>от компании MIX RENT</p>
-            <button class="openForm"text="Срочно нужна машина?" hover-text="Оформим за 10 минут"></button>
+            <p>MIX RENT предоставляет возможность арендовать автомобиль
+              по разумным ценам. Путешествуйте по всему Калининграду без ограничений!</p>
+            <p>Мы индивидуально подходим к вашему заказу, техническое состояние
+              автомобилей проверяется постоянно, что гарантирует вашу безопасность.</p>
           </div>
-          <div class="home-img">
-            <img class="doroga" src="/img/doroga.jpg" alt="">
-            <img class="car" src="/img/fonHome.png" alt="">
+          <div class="container">
+            <div class="form-container form__wrapper">
+              <h3>Срочно нужна машина?
+                <br>  Оставьте номер телефона!</h3>
+                <p>Наш менеджер свяжется c Вами в течение 10 минут и мы подберем оптимальный вариант автомобиля</p>
+              <!-- Форма обратной связи -->
+              <form id="feedback-form" action="/feedback/form-processing.php" enctype="multipart/form-data" novalidate>
+                <div class="form-row">
+                  <!-- Имя пользователя -->
+                  <div class="form-group">
+          
+                    <input id="name" type="text" name="name" class="form-control" value="" placeholder="Имя" minlength="2"
+                      maxlength="30" required="required">
+                    <div class="invalid-feedback"></div>
+                  </div>
+                    <!-- Телефон -->
+                    <div class="form-group">
+       
+                      <div class="input-group">
+                      <input id="phone" type="tel" name="phone" class="form-control style_input phone_mask" placeholder="Введите телефон" value="" required="required" autocomplete="off">
+                      <div class="invalid-feedback"></div>
+                      </div>
+                  </div>
+                </div>
+        
+        
+                <!-- Сообщение об ошибке -->
+                <div class="form-error form-error_hide" style="display: none;">Исправьте данные и отправьте форму ещё раз.</div>
+        
+                <!-- Кнопка для отправки формы на сервер -->
+                <div class="form-submit">
+                  <button type="submit">Перезвоните мне</button>
+                </div>
+        
+              </form>
+        
+              <!-- Сообщение об успешной отправки формы -->
+              <div class="form-success form-success_hide" style="display: none;">
+                <div class="form-success__message">Форма успешно отправлена. Нажмите <button type="button"
+                    class="form-success__btn">здесь</button>, если нужно отправить ещё одну форму.</div>
+              </div>
+        
+            </div>
+        
           </div>
        </div>
 
-       <div class="container">
-        <div class="form-container form__wrapper">
-          <div class="close">
-            <div></div>
-            <div></div>
-          </div>
-          <h3>Срочно нужна машина?
-            <br>  Оставьте номер телефона!</h3>
-            <p>Наш менеджер свяжется c Вами в течение 10 минут и мы подберем оптимальный вариант автомобиля</p>
-          <!-- Форма обратной связи -->
-          <form id="feedback-form" action="/feedback/form-processing.php" enctype="multipart/form-data" novalidate>
-            <div class="form-row">
-              <!-- Имя пользователя -->
-              <div class="form-group">
-      
-                <input id="name" type="text" name="name" class="form-control" value="" placeholder="Имя" minlength="2"
-                  maxlength="30" required="required">
-                <div class="invalid-feedback"></div>
-              </div>
-                <!-- Телефон -->
-                <div class="form-group">
-   
-                  <div class="input-group">
-                  <input id="phone" type="tel" name="phone" class="form-control style_input phone_mask" placeholder="Введите телефон" value="" required="required" autocomplete="off">
-                  <div class="invalid-feedback"></div>
-                  </div>
-              </div>
-            </div>
-    
-    
-            <!-- Сообщение об ошибке -->
-            <div class="form-error form-error_hide" style="display: none;">Исправьте данные и отправьте форму ещё раз.</div>
-    
-            <!-- Кнопка для отправки формы на сервер -->
-            <div class="form-submit">
-              <button type="submit">Забронировать</button>
-            </div>
-    
-          </form>
-    
-          <!-- Сообщение об успешной отправки формы -->
-          <div class="form-success form-success_hide" style="display: none;">
-            <div class="form-success__message">Форма успешно отправлена. Нажмите <button type="button"
-                class="form-success__btn">здесь</button>, если нужно отправить ещё одну форму.</div>
-          </div>
-    
-        </div>
-    
-      </div>
 
-      <div class="catalog">
+      <div class="catalog" id="catalog" data-num="1">
         <div class="catalog-about">
           <h2>Наши автомобили</h2>
           <a href="#"><div class="catalog-about__more">
@@ -137,10 +134,10 @@
         <div class="line"> </div>
         <div class="advantages__text">
             <h2>Страховка на случай ДТП</h2>
-            <p>Все автомобили застрахованы на условиях покрытия ущерба ОГПО и КАСКО.Техническая поддержка 24 часа в сутки 7 дней в неделю. Гибкая система скидок. Комфорти удобство.Работаем по договору. Страховка на случай ДТП</p>
+            <p style="width: 250px;">Все автомобили застрахованы на условиях покрытия ущерба ОГПО и КАСКО.Техническая поддержка 24 часа в сутки 7 дней в неделю. Гибкая система скидок. Комфорти удобство.Работаем по договору. Страховка на случай ДТП</p>
         </div>
     </div>
-    <div class="conditions">
+    <!----<div class="conditions">
         <div class="conditions__text"> 
             <h2>Выберите автомобиль</h2>
             <p>В нашем автопарке представлен широкий ассортимент автомобилей на любой вкус и кошелек</p>
@@ -157,11 +154,191 @@
             <h2>Дополнительные опции</h2>
             <p>По желанию доступно: детское кресло, GPS или услуги водителя</p>
         </div>
+    </div>-->
+    <div class="application" id="application">
+      <div class="application-block">
+        <h2>Заявка на подбор машины!</h2>
+        <p>Оставьте ваш номер телефона, мы перезвоним вам в течение 10 минут и 
+          подберем оптимальный вариант автомобиля на прокат для максимально комфортного вождения</p>
+          <form id="feedback-form" action="/feedback/form-processing.php" enctype="multipart/form-data" novalidate>
+                <!-- Телефон -->
+                <div class="form-group">
+   
+                  <div class="input-group">
+                  <input id="phone" type="tel" name="phone" class="form-control style_input phone_mask" placeholder="Введите телефон" value="" required="required" autocomplete="off">
+                  <div class="invalid-feedback"></div>
+                  </div>
+              </div>
+    
+    
+            <!-- Сообщение об ошибке -->
+            <div class="form-error form-error_hide" style="display: none;">Исправьте данные и отправьте форму ещё раз.</div>
+    
+            <!-- Кнопка для отправки формы на сервер -->
+            <div class="form-submit">
+              <button type="submit">Заказать обратный звонок</button>
+            </div>
+    
+          </form>
+    
+          <!-- Сообщение об успешной отправки формы -->
+          <div class="form-success form-success_hide" style="display: none;">
+            <div class="form-success__message">Форма успешно отправлена. Нажмите <button type="button"
+                class="form-success__btn">здесь</button>, если нужно отправить ещё одну форму.</div>
+          </div>
+      </div>
     </div>
 
-    </main>
-    <footer>
+
+    <div class="rental-conditions" id="conditions" data-num="2">
+      <div class="rental-conditions__block">
+        <h4>Как забронировать автомобиль?</h4>
+        <ol>
+          <li>Выберите необходимый автомобиль и заполните заявку</li>
+          <li>Если нужна помощь, заполните заявку <a href="#application">тут</a></li>
+          <li>После заполнения заявки, с вами свяжется менеджер</li>
+          <li>Все готово, вы арендовали автомобиль!</li>
+        </ol>
+        <h4>Требования для снятия авто</h4>
+        <ol>
+          <li>Возраст 21+</li>
+          <li>Стаж от 3-х лет</li>
+          <li>Наличие оригиналов документов (права, удостоверение или паспорт)</li>
+        </ol>
+        <h4>Прочие условия</h4>
+        <ol>
+          <li>Залог принимаются только деньги!</li>
+          <li>Оплата залога обязательно (возвращаем сразу)</li>
+          <li>Выезд в другие страны запрещён только в рамках Калининградской области</li>
+          <li>Передача руля запрещена</li>
+          <li>Машину вам сдаём чистой с полным баком принимаем от вас так же чистой с полным баком</li>
+        </ol>
+      </div>
+    </div>
+
+
+
+
+    
+    <div class="faq" id="faq" data-num="3">
+      <h1>Часто задаваемые вопросы</h1>
+      <div class="faq-item">
         
+        <div class="faq-block">
+          <div class="faq-block__question">
+            <p>Можно ли выехать на авто за город или в другие города области?</p>
+            <button class="btnFaq" data-faq="1">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="faq-block__answer" data-faq="1">
+            <p>Да можно. Передвижение на наших автомобилях возможно по всей территории Калининградской области. Подробности у менеджеров.</p>
+          </div>
+        </div>
+
+        <div class="faq-block">
+          <div class="faq-block__question">
+            <p>Возможно ли продлить автомобиль не приезжая в в ваш офис?</p>
+            <button class="btnFaq" data-faq="2">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="faq-block__answer" data-faq="2">
+            <p>	Да, это возможно. Вам необходимо заранее связаться с нашим менеджером и сообщить об этом. Оплату произвести можно так же удаленно.</p>
+          </div>
+        </div>
+
+        <div class="faq-block">
+          <div class="faq-block__question">
+            <p>Можно ли снять авто без залога?</p>
+            <button class="btnFaq" data-faq="3">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="faq-block__answer" data-faq="3">
+            <p>	Нет, наличие залога обязательно для всех без исключения.</p>
+          </div>
+        </div>
+
+        <div class="faq-block">
+          <div class="faq-block__question">
+            <p>Возможно ли заранее забронировать автомобиль?</p>
+            <button class="btnFaq" data-faq="5">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="faq-block__answer" data-faq="5">
+            <p>Бронирования принимаем только за 1-2 дня до даты (раннего бронирования нет)</p>
+          </div>
+        </div>
+
+        <div class="faq-block">
+          <div class="faq-block__question">
+            <p>Можно ли получить автомобиль в аэропорту или в другом месте?</p>
+            <button class="btnFaq" data-faq="6">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="faq-block__answer" data-faq="6">
+            <p>Доставка/возврат автомобиля в/из:
+            <br>  По Калининграду 500 руб.
+            <br>  Аэропорт — 1000 руб.
+            <br>  Зеленоградск — 1200 руб.
+            <br>  Светлогорск — 1 500 руб.
+            <br>  Балтийск - 1500 руб.
+            <br>  Пионерский - 1500 руб.
+            <br>  Янтарный — 1 800 руб.
+            <br>  Черняховск - 2500 руб.
+            <br>  Советск - 2500 руб.
+            <br>  *Стоимость указана за одну сторону.</p>
+          </div>
+        </div>
+
+
+        <div class="faq-block">
+          <div class="faq-block__question">
+            <p>Можно ли сдать автомобиль немытый и с неполным баком?</p>
+            <button class="btnFaq" data-faq="7">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="faq-block__answer" data-faq="7">
+            <p>Да можно, оплатив 600-700руб. за мойку и по 70руб. за литр недостающего бензина.</p>
+          </div>
+        </div>
+
+        <h3><span>*</span>Обращаем Ваше внимание, что во всех регионах России работает система фотовидеофиксации нарушений ПДД. С помощью видеокамер фиксируются такие нарушения как превышение скорости, проезд на красный сигнал светофора, нарушение дорожной разметки. В соответствии с договором аренды ТС без водителя Арендатор несет ответственность по оплате всех штрафов, наложенных в процессе эксплуатации ТС Арендатором. При этом кроме оплаты суммы штрафа Арендатор возмещает Арендодателю косвенные расходы по оплате данного штрафа в размере 20% от его суммы, 
+          но не более 300,00 рублей (налоги, обработка штрафов, перечисление штрафов в бюджет и пр).</h3>
+      </div>
+    </div>
+    </main>
+    <hr>
+    <footer>
+      <div class="footer-link">
+        <nav>
+          <img src="/icon/logo.png" alt="logo" width="180px">
+          <ul>
+            <a href="#catalog"><li>Аренда авто</li></a>
+            <a href="#conditions"><li>Условия проката</li></a>
+            <a href="#"><li>Контакты</li></a>
+            <a href="#"><li>О компании</li></a>
+            <a href=""><li>Политика</li></a>
+            <a href="#faq"><li>FAQ</li></a>
+          </ul>
+        </nav>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac091f5ab0a9e60d66dfeb0852123a66b85fa57372f4fd631556dd9f56f6206f0&amp;source=constructor" width="800" height="400" frameborder="0"></iframe>
+      </div>
+      <div class="footer-bottom">
+        <p>г. Калининград, ул. Ю. Гагарина, д.225, к. А1</p>
+        <p>2024 © Все права защищены.</p>
+        <p>Mix Rent – Автопрокат в Калининграде.</p>
+      </div>
     </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
@@ -197,7 +374,7 @@
   });
 </script>
 <script type="module" src="/script/index.js"></script>
-<script src="/script/animation.js"></script>
+<script type="module" src="/script/animation.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.js" integrity="sha512-bvxXT2u2PNVKMpHmLR54QQ+qAnhn0dM//5spHP+sjRcnlZSmNMaLkvZXAr8peMHyNlUoDEgNnYIlrUTnr5kNYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

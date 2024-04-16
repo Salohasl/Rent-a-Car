@@ -1,31 +1,75 @@
-function showCarScroll(){
-    let car = document.querySelector('.car');
-    let header = document.querySelector('header');
-    window.addEventListener('scroll', ()=>{
-        if(scrollY > 20){
-                car.classList.add('anim');
-                header.classList.add('margin');
-        }else{
-            header.classList.remove('margin');
-        }
-        if(scrollY == 300){
+function showFaq(){
+    const btnFaq = document.querySelectorAll('.btnFaq');
+    const faqAnswers = document.querySelectorAll('.faq-block__answer');
 
-        }
-
-       //console.log(scrollY)
+    btnFaq.forEach(elem =>{
+        elem.addEventListener('click',()=>{
+            for(let faqAnswer of faqAnswers){
+                if(elem.dataset.faq == faqAnswer.dataset.faq){
+                    faqAnswer.classList.toggle('active');
+                    elem.classList.toggle('rotate');
+                }
+            }
+        })
     })
 }
-showCarScroll();
+showFaq();
 
-function showForm(){
-    let form = document.querySelector('.container');
+function linkUnderline() {
+    const catalog = document.getElementById('catalog');
+    const conditions = document.getElementById('conditions');
+    const faq = document.getElementById('faq');
+    const links = document.querySelectorAll('.link');
 
-    document.querySelector('.openForm').addEventListener('click', ()=>{
-        form.classList.add('show');
-    })
-    document.querySelector('.close').addEventListener('click', ()=>{
-        form.classList.remove('show');
-    })
+    window.addEventListener('scroll', () => {
+        const windowY = window.scrollY;
+        //каталог
+        const rectCatalog = catalog.getBoundingClientRect();
+        const catalogY = rectCatalog.y + windowY;
+        //условия
+        const rectConditions = conditions.getBoundingClientRect();
+        const conditionsY = rectConditions.y + windowY;
+        //FAQ
+        const rectFaq = faq.getBoundingClientRect();
+        const faqY = rectFaq.y + windowY;
+
+        for (let link of links) {
+            let activeElement = '';
+
+            if (windowY >= catalogY && windowY < catalogY + rectCatalog.height) {
+                activeElement = 'catalog';
+            } else if (windowY >= conditionsY && windowY < conditionsY + rectConditions.height) {
+                activeElement = 'conditions';
+            } else if (windowY >= faqY && windowY < faqY + rectFaq.height){
+                activeElement = 'faq';
+            }
+
+            switch (activeElement) {
+                case 'catalog':
+                    if (catalog.dataset.num == link.dataset.num) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                    break;
+                case 'conditions':
+                    if (conditions.dataset.num == link.dataset.num) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                    break;
+                case 'faq':
+                    if (faq.dataset.num == link.dataset.num) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                default:
+                    link.classList.remove('active');
+            }
+        }
+    });
 }
 
-showForm()
+linkUnderline();

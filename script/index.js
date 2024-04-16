@@ -23,17 +23,20 @@ function autoUnloading(){
 
         function creatingBlocks(){
             let img = document.createElement('img');
-            img.classList.add('img-auto')
+            img.classList.add('img-auto');
+            img.setAttribute('id', keyAuto.id);
             img.src = keyAuto.src;
             carItem.append(img);
-
+            
             let carItemText = document.createElement('div');
             carItemText.classList.add('auto-item__text');
             carItemText.innerHTML = `
-                <h3>${keyAuto.name}</h3>
-                <p>- Объем: <b>${keyAuto.engine}</b> <br>- Тип топлива: <b>${keyAuto.fuel}</b> <br>- Кузов: <b>${keyAuto.description}</b> <br>- Средний расход: <b>${keyAuto.consumption}</b></p>
-                <h2>Цена за сутки: <span>${keyAuto.price}</span></h2>
+                <div class="auto-item__text-desc">
+                    <h3>${keyAuto.name}</h3>
+                    <p>- Объем: <b>${keyAuto.engine}</b> <br>- Тип топлива: <b>${keyAuto.fuel}</b> <br>- Кузов: <b>${keyAuto.description}</b> <br>- Средний расход: <b>${keyAuto.consumption}</b></p>
+                </div>
                 <div class="auto-item__text-button">
+                    <h2>Цена за сутки: <span>${keyAuto.price}</span></h2>
                     <button>Забронировать</button>
                     <button>Подробнее</button>
                 </div>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xml:lang="ru" lang="ru" class="">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+<meta name="HandheldFriendly" content="true" >
+<meta name="MobileOptimized" content="width">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Mix Rent - Прокат автомобилей</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<meta property="og:url" content="https://site">
+<meta property="og:title" content="Аренда авто Калининград ➜ от 1 000 рублей в сутки – Mix Rent">
+<meta property="og:description" content="Аренда авто Калининград от компании Mix Rent, прокат машин посуточно, автопрокат без водителя по доступным ценам Аренда машин бюджетный класс, бизнес, джип для путешествий по Калининграду и области, заказ автомобиля в аренду недорого в аэропорт, цена аренды машины от 1 000 рублей. Дешевая стоимость проката по городу!">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://static.tildacdn.com/lib/unsplash/952b02a9-3d8d-6b6c-bc4c-79162e76c335/-/resize/504x/photo.jpg">
+<link rel="canonical" href="https://site">
+<meta name="keywords" content="" />
+<meta name="description" content="Аренда авто Калининград от компании Mix Rent, прокат машин посуточно, автопрокат без водителя по доступным ценам Аренда машин бюджетный класс, бизнес, джип для путешествий по Калининграду и области, заказ автомобиля в аренду недорого в аэропорт, цена аренды машины от 1 000 рублей. Дешевая стоимость проката по городу!" />
+<link rel="icon" href="/icon/logo.png" type="image/png">
+<link rel="stylesheet" href="/contact/style/style.css">
+<link rel="stylesheet" href="/style/media.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Black+Ops+One&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Black+Ops+One&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:wght@100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:wght@100&display=swap" rel="stylesheet">
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=22c8d170-7737-4539-a2e7-6260f1d331c2" type="text/javascript"></script>
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <a href="/index.html"><img src="/icon/logo.png" alt="" width="110px"></a>
+      </div>
+        <nav>
+          <ul>
+            <a href="/index.html#catalog" class="link" data-num="1"><li>Аренда авто</li></a>
+            <a href="/index.html#conditions" class="link" data-num="2"><li>Условия проката</li></a>
+            <a href="/contact/contact.html" class="active"><li>Контакты</li></a>
+            <div class="link">
+              <a href="#"><li>О компании</li></a>
+              <div class="link-show">
+                <a href="/politica.html"><li>Политика</li></a>
+                <a href="/index.html#faq" class="link" data-num="3"><li>FAQ</li></a>
+              </div>
+            </div>
+            <a href="tel:+79527956805">+7(952)795-68-05</a>
+          </ul>
+        </nav>
+        <a href="#"><button>Забронировать</button></a>
+    </header>
+    <main>
+        <h2>Контактная информация</h2>
+        <div class="block-top">
+            <p>
+                Время работы:
+               <br> ПН-ПТ 09:00 - 19:00
+            </p>
+            <p>
+                Наш телефон:
+              <br>  <a href="tel:+79527956805">+7(952)795-68-05</a>
+            </p>
+        </div>
+        <div class="block-bottom">
+            <p>
+                Адрес:
+               <br>г. Калининград, улица Юрия Гагарина, 225кА1
+            </p>
+            <p>
+                Наша почта:
+              <br>  <a href="mailto:mixrent.rent@yandex.ru">mixrent.rent@yandex.ru</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+
+        <div id="map"></div>
+
+        <div class="footer-bottom">
+            <p>г. Калининград, ул. Ю. Гагарина, д.225, к. А1</p>
+            <p>2024 © Все права защищены.</p>
+            <p>Mix Rent – Автопрокат в Калининграде.</p>
+        </div>
+    </footer>
+
+<script>
+ymaps.ready(init);
+
+function init() {
+    var myMap = new ymaps.Map("map", {
+            center:  [54.730796, 20.564153],
+            zoom: 17
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+    // Создаем геообъект с типом геометрии "Точка".
+        myGeoObject = new ymaps.GeoObject({
+            // Описание геометрии.
+            geometry: {
+                type: "Point",
+                coordinates: [54.730796, 20.564153]
+            },
+            // Свойства.
+            properties: {
+                // Контент метки.
+                iconContent: 'Mix Rent',
+                hintContent: 'г. Калининград, ул. Ю. Гагарина, д.225, к. А1'
+            }
+        }, {
+            // Опции.
+            // Иконка метки будет растягиваться под размер ее содержимого.
+            preset: 'islands#blackStretchyIcon',
+            // Метку можно перемещать.
+            draggable: true
+        });
+        
+
+    myMap.geoObjects
+        .add(myGeoObject)
+        myMap.behaviors.disable('scrollZoom')
+}
+
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.js" integrity="sha512-bvxXT2u2PNVKMpHmLR54QQ+qAnhn0dM//5spHP+sjRcnlZSmNMaLkvZXAr8peMHyNlUoDEgNnYIlrUTnr5kNYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

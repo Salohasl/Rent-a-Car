@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -155,6 +156,8 @@ header button:hover {
 .home .home-text {
   margin-left: 60px;
   margin-top: 50px;
+  -webkit-animation: showHome 1.5s both;
+          animation: showHome 1.5s both;
 }
 .home .home-text h2 {
   font-size: 45px;
@@ -181,6 +184,47 @@ header button:hover {
   font-weight: 300;
 }
 
+@-webkit-keyframes showHome {
+  0% { /* Старт анимации */
+    opacity: 0;
+    transform: translate3d(-100%, 0%, 0px);
+  }
+  100% { /* в финале анимации - финал это заданная 0.55s */
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes showHome {
+  0% { /* Старт анимации */
+    opacity: 0;
+    transform: translate3d(-100%, 0%, 0px);
+  }
+  100% { /* в финале анимации - финал это заданная 0.55s */
+    opacity: 1;
+    transform: none;
+  }
+}
+@-webkit-keyframes showForm {
+  0% { /* Старт анимации */
+    opacity: 0;
+    transform: translate3d(0px, -100%, 0px);
+  }
+  100% { /* в финале анимации - финал это заданная 0.55s */
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes showForm {
+  0% { /* Старт анимации */
+    opacity: 0;
+    transform: translate3d(0px, -100%, 0px);
+  }
+  100% { /* в финале анимации - финал это заданная 0.55s */
+    opacity: 1;
+    transform: none;
+  }
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -189,6 +233,8 @@ header button:hover {
   gap: 20px;
   margin-top: 50px;
   margin-bottom: 50px;
+  -webkit-animation: showForm 1.5s both;
+          animation: showForm 1.5s both;
 }
 .container .form-container {
   display: flex;
@@ -413,6 +459,7 @@ header button:hover {
 }
 
 .advantages {
+  opacity: 0;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -420,6 +467,11 @@ header button:hover {
   gap: 30px;
   flex-wrap: wrap;
   padding: 50px;
+}
+.advantages.anim {
+  opacity: 1;
+  -webkit-animation: showHome 1.5s both;
+          animation: showHome 1.5s both;
 }
 
 .advantages__text {
@@ -579,6 +631,7 @@ header button:hover {
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 150px;
+  transition: 0.5s;
 }
 .faq h1 {
   color: #E6E6E6;
@@ -597,7 +650,7 @@ header button:hover {
   gap: 15px;
   width: 100%;
   padding: 50px 10px 50px 10px;
-  background: rgba(0, 0, 0, 0.89);
+  background: rgba(0, 0, 0, 0.95);
   margin-top: -50px;
 }
 .faq-item h3 {
@@ -610,6 +663,7 @@ header button:hover {
 }
 
 .faq-block {
+  opacity: 0;
   border-top: 1px solid #E6E6E6;
   border-bottom: 1px solid #E6E6E6;
   display: flex;
@@ -619,6 +673,12 @@ header button:hover {
   margin-top: 50px;
   padding: 20px;
   width: 48%;
+  transition: 0.5s;
+}
+.faq-block.anim {
+  opacity: 1;
+  -webkit-animation: showHome 1.5s both;
+          animation: showHome 1.5s both;
 }
 .faq-block .faq-block__question {
   display: flex;

@@ -67,7 +67,7 @@ header .logo {
   width: 80px;
   transition: 0.5s;
 }
-header img {
+header .logo img {
   left: -5px;
   position: absolute;
 }
@@ -182,6 +182,42 @@ header button:hover {
   width: 70%;
   font-size: 18px;
   font-weight: 300;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.whatsapp img {
+  width: 50px;
+  z-index: 100;
+}
+
+.messenger {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-right: 50px;
+}
+.messenger img {
+  width: 25px;
+}
+
+.ph {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconMessenger {
+  background-color: white;
+  width: 20px;
+  border-radius: 45%;
 }
 
 @-webkit-keyframes showHome {
@@ -363,7 +399,6 @@ header button:hover {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
-  border: 5px solid rgb(230, 230, 230);
 }
 
 .img-hover {
@@ -623,7 +658,7 @@ header button:hover {
   color: #a4161a;
   font-weight: 400;
   text-align: center;
-  margin: 50px 0px 20px 0px;
+  margin: 0px 0px 20px 0px;
 }
 
 .faq {

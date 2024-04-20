@@ -181,12 +181,12 @@ header{
     position: fixed;
     bottom: 20px;
     right: 20px;
+    z-index: 200;
     img{
         width: 50px;
-        z-index: 100;
     }
 }
-.messenger{
+.messenger {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -194,21 +194,26 @@ header{
     justify-content: center;
     gap: 20px;
     padding-right: 50px;
-    img{
-        width: 25px;
-    }
-}
-.ph{
+  }
+  .messenger img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .ph {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
-}
-.iconMessenger{
-    background-color: white;
+  }
+  
+  .iconMessenger {
+
     width: 20px;
-    border-radius: 45%;
-}
+
+  }
 @keyframes showHome {
     0% {                /* Старт анимации */
         opacity: 0;
@@ -348,6 +353,24 @@ header{
             }
         }
     }
+    a{
+        text-decoration: none;
+    }
+    #loadMore, #showLess {
+        background-color: #a4161a;
+        padding: 20px;
+        font-size: 25px;
+        width: 100%;
+        color: white;
+        cursor: pointer;
+        border: none;
+        border-radius: 20px;
+        margin-top: 30px;
+        transition: .5s;
+    }
+    #loadMore:hover, #showLess:hover {
+       background-color: #161A1D;
+    }
     .catalog-auto{
         display: flex;
         flex-direction: column;
@@ -373,13 +396,17 @@ header{
     border: 1px solid rgb(230, 230, 230, .6);
     border-radius: 20px;
     padding: 20px;
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     position: relative;
-
+    opacity: 0;
+    &.anim{
+        opacity: 1;
+        animation: showHome 1s both;
+    }
     &:hover{
         .img-auto{
             opacity: 0;

@@ -57,7 +57,55 @@ function autoUnloading(){
             carItemHover.append(imgHover);
         }
         creatingBlocksHover();
+
     }
 }   
 
 autoUnloading();
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var listItems = document.querySelectorAll('.auto-item');
+    var loadMoreButton = document.getElementById('loadMore');
+    var showLessButton = document.getElementById('showLess');
+    var currentItems = 3;
+    var totalItems = listItems.length;
+
+    function showItems(itemsToShow) {
+        for (var i = 0; i < itemsToShow; i++) {
+            listItems[i].style.display = 'flex';
+        }
+    }
+
+    function hideItems(itemsToHide) {
+        for (var i = itemsToHide; i < totalItems; i++) {
+            listItems[i].style.display = 'none';
+        }
+    }
+
+    showItems(currentItems);
+
+    loadMoreButton.addEventListener('click', function () {
+        currentItems += 3;
+        if (currentItems > totalItems) {
+            currentItems = totalItems;
+        }
+        showItems(currentItems);
+        if (currentItems === totalItems) {
+            loadMoreButton.style.display = 'none';
+        }
+        showLessButton.style.display = 'block';
+    });
+
+    showLessButton.addEventListener('click', function () {
+        currentItems -= 3;
+        if (currentItems < 3) {
+            currentItems = 3;
+        }
+        hideItems(currentItems);
+        if (currentItems === 3) {
+            showLessButton.style.display = 'none';
+        }
+        loadMoreButton.style.display = 'block';
+    });
+});

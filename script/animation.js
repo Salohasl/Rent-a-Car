@@ -79,6 +79,7 @@ linkUnderline();
 
 const faqBlocks = document.querySelectorAll('.faq-block');
 const advantages = document.querySelector('.advantages');
+const autoItems = document.querySelectorAll('.auto-item');
 const observerCallback = (entries, observer) => {
  entries.forEach(entry => {
     // Check if the faqBlock is intersecting
@@ -102,4 +103,7 @@ observer.observe(advantages);
 // Следите за каждым faqBlock
 for (let faqBlock of faqBlocks) {
     observer.observe(faqBlock);
+}
+for(let autoItem of autoItems){
+    observer.observe(autoItem );
 }

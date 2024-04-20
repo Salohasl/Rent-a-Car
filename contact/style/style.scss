@@ -48,11 +48,12 @@ header{
         height: 80px;
         width: 80px;
         transition: .5s;
+        img{
+            left: -5px;
+            position: absolute;
+        }
     }
-    img{
-        left: -5px;
-        position: absolute;
-    }
+    
     ul{
         display: flex;
         flex-direction: row;
@@ -84,12 +85,21 @@ header{
         width: 200px;
         border-radius: 40px;
         transition: .5s;
+        cursor: pointer;
         &:hover{
-            background-color: black;
-            color: #FF4343;
+            background-color: #161A1D;
         }
     }
 }
+.ph {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    img{
+        width: 20px;
+    }
+  }
 .link{
     position: relative;
     display: flex;

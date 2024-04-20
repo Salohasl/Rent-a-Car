@@ -188,10 +188,10 @@ header button:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  z-index: 200;
 }
 .whatsapp img {
   width: 50px;
-  z-index: 100;
 }
 
 .messenger {
@@ -203,8 +203,13 @@ header button:hover {
   gap: 20px;
   padding-right: 50px;
 }
+
 .messenger img {
-  width: 25px;
+  width: 30px;
+  height: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
 }
 
 .ph {
@@ -215,9 +220,7 @@ header button:hover {
 }
 
 .iconMessenger {
-  background-color: white;
   width: 20px;
-  border-radius: 45%;
 }
 
 @-webkit-keyframes showHome {
@@ -385,6 +388,24 @@ header button:hover {
   border-radius: 15px;
   text-align: center;
 }
+.catalog a {
+  text-decoration: none;
+}
+.catalog #loadMore, .catalog #showLess {
+  background-color: #a4161a;
+  padding: 20px;
+  font-size: 25px;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  margin-top: 30px;
+  transition: 0.5s;
+}
+.catalog #loadMore:hover, .catalog #showLess:hover {
+  background-color: #161A1D;
+}
 .catalog .catalog-auto {
   display: flex;
   flex-direction: column;
@@ -410,12 +431,18 @@ header button:hover {
   border: 1px solid rgba(230, 230, 230, 0.6);
   border-radius: 20px;
   padding: 20px;
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   position: relative;
+  opacity: 0;
+}
+.auto-item.anim {
+  opacity: 1;
+  -webkit-animation: showHome 1s both;
+          animation: showHome 1s both;
 }
 .auto-item:hover .img-auto {
   opacity: 0;

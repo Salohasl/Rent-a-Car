@@ -1,0 +1,155 @@
+@media only screen and (max-width:1260px){ 
+    nav{
+        display: none;
+      }
+      header{
+        justify-content: center;
+        padding-top: 20px;
+      }
+      header .logo{
+        position: absolute;
+        left: 20px;
+      }
+      .menuBtn{
+        display: flex;
+        z-index: 105;
+      }
+      .messenger{
+        display: none;
+      }
+      .messenger-act.act{
+        display: flex;
+        margin-bottom: 10%;
+      }
+       nav.popUp{
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center;
+        background-color: #161A1D;
+        position: fixed;
+        padding-top: 2%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        width: 45vw;
+        animation-duration: 0.55s;  /* Время работы анимации */
+        animation-fill-mode: both;  /* Поведение анимации */
+        animation-name: fadeInDown;/* Имя анимации */
+      } 
+      header ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0;
+    
+      }
+      header ul a{
+        color: white;
+        font-size: 25px;
+        margin-left: 40px;
+      }
+      header ul a:hover {
+          color:#FF4343;
+        }
+
+      @keyframes fadeInDown { /* Сама анимация */
+        0% {                /* Старт анимации */
+            opacity: 0;
+            transform: translate3d(100%, 0px, 0px);
+        }
+        100% {              /* в финале анимации - финал это заданная 0.55s */
+            opacity: 1;
+            transform: none;
+        }
+      }
+     
+      .link .link-show {
+        opacity: 1;
+        position: static;
+        background-color: #161A1D;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+        margin-left: 15px;
+      }
+      .link .link-show a:nth-of-type(2){
+        margin-top: 20px;
+        margin-left: -65px;
+   
+      }
+     
+      
+}
+
+@media only screen and (max-width:992px){
+  #map{
+    margin-top: 50px;
+  }
+  .block-top, .block-bottom{
+    gap: 30px;
+
+  }
+}
+
+
+
+
+@media only screen and (max-width:768px){ /*-------ГОТОВО-------*/
+  .block-top, .block-bottom{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .block-top p:nth-of-type(2) {
+    margin-left: 0px;
+  }
+  .block-bottom p:nth-of-type(2) {
+    margin-left: 0px;
+  }
+  main h2{
+    padding: 10px;
+    line-height: 35px;
+    text-align: center;
+  }
+  
+}
+
+
+
+/* МОБИЛКА*/
+@media only screen and (max-width:570px){  
+    nav.popUp{
+        width: 90vw;
+        padding-top: 7%;
+    }
+    main{
+      text-align: center;
+    }
+    .footer-bottom{
+      flex-wrap: wrap;
+      text-align: center;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+    header button{
+      font-size: 15px;
+      width: auto;
+      margin-right: 0;
+    }
+    header .logo{
+      left: 0px;
+    }
+}
+@media only screen and (max-width:400px){
+    nav.popUp{
+        width: 100vw;
+    }
+}
+@media only screen and (max-width:320px){
+  
+} 

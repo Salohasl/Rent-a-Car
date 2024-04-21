@@ -28,7 +28,55 @@ body {
   -webkit-animation: showBody 1s ease-in;
           animation: showBody 1s ease-in;
 }
+.menuBtn.active span:nth-of-type(1) {
+  display: none;
+}
 
+.menuBtn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+
+.menuBtn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+.menuBtn {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 1%;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: fixed;
+  right: 20px;
+  background-color: #161A1D;
+  padding-left: 23px;
+}
+
+.menuBtn span {
+  width: 24px;
+  height: 3px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: #a4161a;
+  transition: all 0.5s;
+  border-radius: 2px;
+}
+
+.menuBtn span:nth-of-type(2) {
+  top: calc(40% - 5px);
+}
+
+.menuBtn span:nth-of-type(3) {
+  top: calc(55% + 5px);
+}
 @-webkit-keyframes showBody {
   0% {
     opacity: 0;
@@ -92,21 +140,7 @@ header ul a:hover {
 header ul a.active {
   color: #FF4343;
 }
-header button {
-  margin-right: 20px;
-  background: #a4161a;
-  color: #FFFFFF;
-  border: none;
-  font-size: 18px;
-  padding: 10px;
-  width: 200px;
-  border-radius: 40px;
-  transition: 0.5s;
-}
-header button:hover {
-  background-color: black;
-  color: #FF4343;
-}
+
 
 .link {
   position: relative;
@@ -150,7 +184,21 @@ header button:hover {
     width: 50px;
     z-index: 100;
   }
-  
+  .messenger-act{
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-right: 50px;
+  }
+  .messenger-act img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
   .messenger {
     display: flex;
     flex-direction: row;
@@ -287,6 +335,6 @@ hr {
     justify-content: space-between;
     color: #E6E6E6;
     margin-top: 50px;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     background-color: #a4161a;
   }/*# sourceMappingURL=style.css.map */

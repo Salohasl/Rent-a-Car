@@ -115,6 +115,118 @@
        </div>
 
 
+      <div class="reservation">
+        <div class="reservation-title">
+          <div class="logo">
+            <a href="/index.html"><img src="/icon/logo.png" alt="" width="110px"></a>
+          </div>
+          <h3>Цена за сутки</h3>
+          <div class="close">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <hr>
+
+        <div class="form-container form__wrapper">
+          <!-- Форма обратной связи -->
+          <form id="feedback-form" action="/feedback/form-processing.php" enctype="multipart/form-data" novalidate>
+            
+            <div class="form-row">
+              <!-- Автомобиль -->
+              <div class="form-group">
+                <label for="car">Ваш автомобиль</label>
+                <input id="car" type="text" name="car" class="form-control" value="" placeholder="Автомобиль" minlength="2"
+                  maxlength="100" required="required" disabled>
+                <div class="invalid-feedback"></div>
+              </div>
+              <!-- Имя пользователя -->
+              <div class="form-group">
+                <label for="name">ФИО</label>
+                <input id="name" type="text" name="name" class="form-control" value="" placeholder="Имя" minlength="2"
+                  maxlength="30" required="required">
+                <div class="invalid-feedback"></div>
+              </div>
+              <!-- Email пользователя -->
+              <div class="form-group">
+                <label for="email" class="control-label">Email-адрес</label>
+                <input id="email" type="email" name="email" required="required" class="form-control" value=""
+                  placeholder="pochta@mail.ru">
+                <div class="invalid-feedback"></div>
+              </div>
+                <!-- Телефон -->
+                <div class="form-group">
+                  <label for="phone">Телефон для связи:</label>
+                  <div class="input-group">
+                  <input id="phone" type="tel" name="phone" class="form-control style_input phone_mask" placeholder="+7(999)999-99-99" value="" required="required" autocomplete="off">
+                  <div class="invalid-feedback"></div>
+                  </div>
+                </div>
+
+                <div class="place">
+                  <p>Место получения автомобиля:</p>
+                  <div class="place-button">
+                    <button>Доставка</button>
+                    <button>Отдача авто в офисе</button>
+                  </div>
+                </div>
+                
+                <!-- Доставка -->
+              <div class="form-group">
+                <label for="delivery">Доставка авто:</label>
+                <input id="delivery" type="text" name="delivery" class="form-control" value="" placeholder="Адрес доставки" minlength="2"
+                  maxlength="30" required="required">
+                <div class="invalid-feedback"></div>
+              </div>
+
+               <!-- Получения авто в офисе -->
+               <div class="form-group">
+                <label for="receiving">Получение авто по адресу:</label>
+                <input id="receiving" type="text" name="receiving" class="form-control" value="г. Калининград, ул. Ю. Гагарина, д.225, к. А1" placeholder="" minlength="2"
+                  maxlength="30" required="required" disabled> 
+                <div class="invalid-feedback"></div>
+              </div>
+
+
+              <div class="options">
+                <p>Дополнительные опции:</p>
+                <div class="options-group">
+                  <input type="checkbox" name="" id="armchair">
+                  <label for="armchair">Детское кресло</label>
+                </div>
+                <div class="options-group">
+                  <input type="checkbox" name="" id="booster">
+                  <label for="booster">Бустер</label>
+                </div>
+                <div class="options-group">
+                  <input type="checkbox" name="" id="time">
+                  <label for="time">Дополнительные часы сверх аренды</label>
+                </div>
+              </div>
+            </div>
+    
+    
+            <!-- Сообщение об ошибке -->
+            <div class="form-error form-error_hide" style="display: none;">Исправьте данные и отправьте форму ещё раз.</div>
+    
+            <!-- Кнопка для отправки формы на сервер -->
+            <div class="form-submit">
+              <button type="submit">Забронировать авто</button>
+            </div>
+    
+          </form>
+    
+          <!-- Сообщение об успешной отправки формы -->
+          <div class="form-success form-success_hide" style="display: none;">
+            <div class="form-success__message">Форма успешно отправлена. Нажмите <button type="button"
+                class="form-success__btn">здесь</button>, если нужно отправить ещё одну форму.</div>
+          </div>
+    
+        </div>
+
+      </div>
+
+
       <div class="catalog" id="catalog" data-num="1">
         <div class="catalog-about">
           <h2>Наши автомобили</h2>
@@ -151,24 +263,7 @@
             <p style="width: 250px;">Все автомобили застрахованы на условиях покрытия ущерба ОГПО и КАСКО.Техническая поддержка 24 часа в сутки 7 дней в неделю. Гибкая система скидок. Комфорти удобство.Работаем по договору. Страховка на случай ДТП</p>
         </div>
     </div>
-    <!----<div class="conditions">
-        <div class="conditions__text"> 
-            <h2>Выберите автомобиль</h2>
-            <p>В нашем автопарке представлен широкий ассортимент автомобилей на любой вкус и кошелек</p>
-        </div>
-        <div class="conditions__text">
-            <h2>Укажите сроки аренды</h2>
-            <p>Укажите дату взятия и возврата машины на стоянку</p>
-        </div>
-        <div class="conditions__text">
-            <h2>Выберите место аренды</h2>
-            <p>Место, где вам удобно было бы забрать и вернуть авто, например, аэропорт</p>
-        </div>
-        <div class="conditions__text"> 
-            <h2>Дополнительные опции</h2>
-            <p>По желанию доступно: детское кресло, GPS или услуги водителя</p>
-        </div>
-    </div>-->
+    
     <div class="application" id="application">
       <div class="application-block">
         <h2>Заявка на подбор автомобиля!</h2>

@@ -8,6 +8,7 @@ let numberOfCars = document.querySelector('.numberOfCars');
 
 const car = document.querySelector('.catalog-auto');
 
+const img = document.querySelector('.img');
 function autoUnloading(){
     while (car.firstChild) {
         car.removeChild(car.firstChild);
@@ -27,17 +28,17 @@ function autoUnloading(){
             img.setAttribute('id', keyAuto.id);
             img.src = keyAuto.src;
             carItem.append(img);
-            
+  
             let carItemText = document.createElement('div');
             carItemText.classList.add('auto-item__text');
             carItemText.innerHTML = `
                 <div class="auto-item__text-desc">
-                    <h3>${keyAuto.name}</h3>
+                    <h3 class="form-car" data-id="${keyAuto.id}">${keyAuto.name}</h3>
                     <p>- Объем: <b>${keyAuto.engine}</b> <br>- Тип топлива: <b>${keyAuto.fuel}</b> <br>- Кузов: <b>${keyAuto.description}</b> <br>- Средний расход: <b>${keyAuto.consumption}</b></p>
                 </div>
                 <div class="auto-item__text-button">
                     <h2>Цена за сутки: <span>${keyAuto.price}</span></h2>
-                    <button>Забронировать</button>
+                    <button class="show-form" data-id="${keyAuto.id}">Забронировать</button>
                     <button>Подробнее</button>
                 </div>
             `;

@@ -107,3 +107,29 @@ for (let faqBlock of faqBlocks) {
 for(let autoItem of autoItems){
     observer.observe(autoItem );
 }
+
+
+function showForm(){
+    const btn = document.querySelectorAll('.show-form');
+    const reservation = document.querySelector('.reservation');
+    const close = document.querySelector('.close');
+    const formCarTexts = document.querySelectorAll('.form-car');
+    const img = document.querySelector('.img');
+
+    const imgAutos = document.querySelectorAll('.img-auto');
+    btn.forEach(btn =>{
+        btn.addEventListener('click', ()=>{
+            reservation.classList.add('showForm');
+            for(const formCarText of formCarTexts){
+                if(formCarText.dataset.id == btn.dataset.id){
+                    document.getElementById('car').value = formCarText.textContent;
+                }
+            }
+        })
+    })
+    close.addEventListener('click',()=>{
+        reservation.classList.remove('showForm');
+    })
+}
+
+showForm();

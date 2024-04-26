@@ -8,7 +8,7 @@ let numberOfCars = document.querySelector('.numberOfCars');
 
 const car = document.querySelector('.catalog-auto');
 
-const img = document.querySelector('.img');
+
 function autoUnloading(){
     while (car.firstChild) {
         car.removeChild(car.firstChild);
@@ -39,7 +39,7 @@ function autoUnloading(){
                 <div class="auto-item__text-button">
                     <h2>Цена за сутки: <span>${keyAuto.price}</span></h2>
                     <button class="show-form" data-id="${keyAuto.id}">Забронировать</button>
-                    <button>Подробнее</button>
+                    <a href="auto/index.html"><button class="more" data-id="${keyAuto.id}">Подробнее</button></a>
                 </div>
             `;
             carItem.append(carItemText);

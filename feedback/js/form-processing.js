@@ -1,9 +1,3 @@
-/*!
- * Форма обратной связи (https://github.com/itchief/feedback-form)
- * Описание: https://itchief.ru/php/feedback-form
- * Copyright 2016-2022 Alexander Maltsev
- * Licensed under MIT (https://github.com/itchief/feedback-form/blob/master/LICENSE)
- */
 
 class ItcSubmitForm {
 

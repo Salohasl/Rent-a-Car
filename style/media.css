@@ -1,0 +1,299 @@
+@media only screen and (max-width:1260px){ 
+    nav{
+        display: none;
+      }
+      header{
+        justify-content: center;
+        
+        height: 60px;
+      }
+      header .logo{
+        top: -20px;
+        position: absolute;
+        left: 20px;
+      }
+      .menuBtn{
+        display: flex;
+        z-index: 105;
+      }
+      .messenger{
+        display: none;
+      }
+      .messenger-act.act{
+        display: flex;
+        margin-bottom: 10%;
+      }
+       nav.popUp{
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center;
+        background-color: #161A1D;
+        position: fixed;
+        padding-top: 2%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        width: 45vw;
+        animation-duration: 0.55s;  /* Время работы анимации */
+        animation-fill-mode: both;  /* Поведение анимации */
+        animation-name: fadeInDown;/* Имя анимации */
+      } 
+      header ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0;
+    
+      }
+      header ul a{
+        color: white;
+        font-size: 25px;
+        margin-left: 40px;
+      }
+      header ul a:hover {
+          color:#FF4343;
+        }
+
+      @keyframes fadeInDown { /* Сама анимация */
+        0% {                /* Старт анимации */
+            opacity: 0;
+            transform: translate3d(100%, 0px, 0px);
+        }
+        100% {              /* в финале анимации - финал это заданная 0.55s */
+            opacity: 1;
+            transform: none;
+        }
+      }
+     
+      .link .link-show {
+        opacity: 1;
+        position: static;
+        background-color: #161A1D;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+        margin-left: 15px;
+      }
+      .link .link-show a:nth-of-type(2){
+        margin-top: 20px;
+        margin-left: -65px;
+   
+      }
+     
+      .home{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background-size:cover;
+        background-position: 50%;
+      }
+      .home .home-text{
+        margin-left: 0px;
+        text-align: center;
+        margin: 20px;
+      }
+      .home .home-text h2, .home .home-text p:nth-of-type(2), .home .home-text p:nth-of-type(3){
+        width: 100%;
+      }
+      .catalog .catalog-about{
+        flex-wrap: wrap;
+      }
+      .auto-item{
+        flex-direction: column;
+      }
+      .auto-item .auto-item__text{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0px;
+        gap: 20px;
+      }
+      .auto-item__hover{
+        display: none;
+      }
+      .faq-item{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .faq-block{
+        width: 100%;
+      }
+
+}
+
+@media only screen and (max-width:992px){
+    .line{
+        display: none;
+    }
+    .advantages{
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+    }
+    .advantages__text{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .advantages__text p{
+        line-height: 25px;
+    }
+}
+
+
+
+
+@media only screen and (max-width:768px){ /*-------ГОТОВО-------*/
+    .application-block form{
+        flex-direction: column;
+    }
+    .rental-conditions__block{
+        width: 100%;
+        padding: 10px;
+    }
+    .footer-link{
+        flex-direction: column;
+        align-items: center;
+        justify-content: baseline;
+        gap: 20px;
+    }
+    footer{
+        margin-top: 20px;
+    }
+    .footer-link nav{
+        justify-content: center;
+    }
+    .footer-link nav ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 0px;
+    }
+    .footer-bottom{
+        margin-top: 0px;
+    }
+    iframe{
+        width: 100%;
+    }
+
+
+    .reservation-title h3{
+        text-align: center;
+        font-size: 20px;
+        margin-left: 0px;
+    }
+    .reservation .form-auto{
+        flex-direction: column;
+    }
+    .place-button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .reservation-title .logo{
+        display: none;
+    }
+    .reservation .form-auto .input-car, .place{
+        width: 100%;
+    }
+    .form-row{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+
+
+/* МОБИЛКА*/
+@media only screen and (max-width:570px){  
+    nav.popUp{
+        width: 90vw;
+        padding-top: 7%;
+    }
+    .faq-item{
+        margin-top: -100px;
+    }
+    .faq-block .faq-block__question p{
+        width: 70%;
+    }
+    .faq-block .faq-block__answer{
+        width: 100%;
+    }
+    .footer-bottom{
+      flex-wrap: wrap;
+      text-align: center;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+    header .logo{
+      left: 0px;
+    }
+    .faq-item h3{
+        text-align: center;
+    }
+    .container .form-container{
+        width: 100%;
+    }
+    .catalog .catalog-about h2{
+        font-size: 30px;
+    }
+    .catalog .catalog-about .catalog-about__more p{
+        display: none;
+    }
+    .catalog .catalog-auto img{
+        width: 100%;
+    }
+    .catalog .catalog-auto{
+        width: 100%;
+    }
+    .catalog{
+        padding: 0px;
+    }
+    .advantages{
+        padding: 0px;
+    }
+    .advantages__text{
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+        padding: 0px;
+    }
+    .advantages__text p{
+        width: 90%;
+        height: auto;
+    }
+    .application-block h2{
+        font-size: 35px;
+        margin-top: 40px;
+    }
+    .application-block{
+        padding: 5px;
+    }
+    .application-block p{
+        width: 100%;
+        margin: 5px;
+    }
+}
+@media only screen and (max-width:400px){
+    nav.popUp{
+        width: 100vw;
+    }
+}
+@media only screen and (max-width:320px){
+  
+} 

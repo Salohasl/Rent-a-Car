@@ -144,12 +144,6 @@
           <form id="form-1" action="/feedback/examples/form-processing-1.php" enctype="multipart/form-data" novalidate>
             
             <div class="form-row">
-              <!-- Автомобиль -->
-              <div class="form-auto">
-                <label for="car">Ваш автомобиль:</label>
-                <input id="car" class="input-car" type="text" name="car"  value="" placeholder="Автомобиль" minlength="2"
-                  maxlength="100" disabled>
-              </div>
               <!-- Имя пользователя -->
               <div class="form-group">
                 <label for="name"><span>*</span>ФИО</label>
@@ -170,7 +164,12 @@
                   <input id="phone" type="tel" name="phone" class="form-control style_input phone_mask" placeholder="+7(999)999-99-99" value="" required="required" autocomplete="off">
                   <div class="invalid-feedback"></div>
                 </div>
-
+                <!-- Автомобиль -->
+                <div class="form-group">
+                  <label id="carLabel" for="car">Ваш автомобиль и цена</label>
+                  <input id="car" type="text" name="car"  value="" placeholder="" minlength="2"
+                    maxlength="30" disabled>
+                </div>
                 <div class="place">
                   <p><span>*</span>Место получения автомобиля:</p>
                   <div class="place-button">
@@ -190,7 +189,7 @@
                <!-- Получения авто в офисе -->
                <div class="form-group__rec" id="blockPlace" data-place="receiving">
                 <label for="receiving">Получение авто по адресу:</label>
-                <input id="receiving" type="text" name="receiving" class="form-control" value="г. Калининград, ул. Ю. Гагарина, д.225, к. А1" placeholder="" minlength="2"
+                <input id="receiving" type="text" name="receiving" class="form-control" value="" placeholder="" minlength="2"
                   maxlength="30" required="required" disabled> 
                 <div class="invalid-feedback"></div>
               </div>
@@ -212,6 +211,10 @@
                 </div>
                 <input id="checkbox" type="text" name="checkbox" class="form-control" value="" placeholder="" minlength="0"
                   maxlength="30" style="display: none;"> 
+                  <div class="form-group">
+                    <input id="checkbox" type="text" name="checkbox" class="form-control" value="" placeholder="" minlength="0"
+                    maxlength="30" style="display: none;"> 
+                  </div>
               </div>
             </div>
     
@@ -221,7 +224,7 @@
     
             <!-- Кнопка для отправки формы на сервер -->
             <div class="form-submit">
-              <button type="submit">Забронировать авто</button>
+              <button type="submit" id="submitForm">Забронировать авто</button>
             </div>
     
           </form>

@@ -144,6 +144,9 @@
     .advantages__text p{
         line-height: 25px;
     }
+    .auto-item:hover .img-auto{
+      opacity: 1;
+    }
 }
 
 

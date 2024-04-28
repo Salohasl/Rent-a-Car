@@ -478,23 +478,6 @@ header button:hover {
   padding: 10px;
   margin-top: 5px;
 }
-.reservation .form-auto {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.reservation .form-auto label {
-  font-size: 30px;
-}
-.reservation .form-auto .input-car {
-  color: #E6E6E6;
-  background-color: rgba(22, 26, 29, 0);
-  text-align: center;
-  font-size: 30px;
-  border: none;
-  border-bottom: 1px solid #a4161a;
-}
 .reservation #blockPlace {
   display: none;
 }
@@ -622,6 +605,10 @@ header button:hover {
   border-color: #a4161a;
   background-color: #a4161a;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.invalid-feedback {
+  color: red;
 }
 
 .place {
@@ -832,14 +819,20 @@ header button:hover {
 }
 .auto-item__text-button h2 {
   color: #E6E6E6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-.auto-item__text-button h2 span {
+.auto-item__text-button select {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #a4161a;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
   color: #E6E6E6;
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+}
+.auto-item__text-button option {
+  outline: none;
+  background-color: rgb(0, 0, 0);
 }
 .auto-item__text-button button {
   background-color: #a4161a;
@@ -847,8 +840,8 @@ header button:hover {
   border: none;
   padding: 10px;
   font-size: 18px;
-  width: 200px;
-  border-radius: 20px;
+  width: 210px;
+  border-radius: 10px;
   transition: 0.5s;
   cursor: pointer;
 }

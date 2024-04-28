@@ -3,35 +3,8 @@ import catalog from './catalog.js';
 
 //В переменной хранится каталог
 const autoCatalog = catalog;
-const swiperWrapper = document.querySelector('.swiper-wrapper');
-
-
-
-const progressCircle = document.querySelector(".autoplay-progress svg");
-const progressContent = document.querySelector(".autoplay-progress span");
-var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 30,
-  centeredSlides: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },
-  on: {
-    autoplayTimeLeft(s, time, progress) {
-      progressCircle.style.setProperty("--progress", 1 - progress);
-      progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-    }
-  }
-});
-
+const slider = document.querySelector('.slider');
+const titleSite = document.querySelector('title');
 
 
 function autoUnloading(){
@@ -43,11 +16,11 @@ function autoUnloading(){
     for (let keyAuto of autoCatalog) {
      
         if(localId.id == keyAuto.id){
-            swiperWrapper.innerHTML = `
-                <div class="swiper-slide"><img src="${keyAuto.src}"></div>
-                <div class="swiper-slide">slide2</div>
-            `
-
+          titleSite.textContent = keyAuto.name
+            slider.innerHTML = `
+              <img src="${keyAuto.src}" alt="photo">
+              <img src="${keyAuto.srcHover}" alt="photo">
+            `;
         }
         
 

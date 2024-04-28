@@ -37,7 +37,14 @@ function autoUnloading(){
                     <p>- Объем: <b>${keyAuto.engine}</b> <br>- Тип топлива: <b>${keyAuto.fuel}</b> <br>- Кузов: <b>${keyAuto.description}</b> <br>- Средний расход: <b>${keyAuto.consumption}</b></p>
                 </div>
                 <div class="auto-item__text-button">
-                    <h2>Цена за сутки: <span>${keyAuto.price}</span></h2>
+                    <h2>Цена за авто:</h2>
+                    <select name="select">
+                        <option value="">Выберите цену</option>
+                        <option value="${keyAuto.price1}">${keyAuto.price1}</option>
+                        <option value="${keyAuto.price2}">${keyAuto.price2}</option>
+                        <option value="${keyAuto.price3}">${keyAuto.price3}</option>
+                        <option value="${keyAuto.price4}">${keyAuto.price4}</option>
+                    </select>
                     <button class="show-form" data-id="${keyAuto.id}">Забронировать</button>
                     <a href="auto/index.html"><button class="more" data-id="${keyAuto.id}">Подробнее</button></a>
                 </div>

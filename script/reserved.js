@@ -1,42 +1,13 @@
-function showForm(){
-    const btn = document.querySelectorAll('.show-form');
-    const reservation = document.querySelector('.reservation');
-    const close = document.querySelector('.close');
-    const formCarTexts = document.querySelectorAll('.form-car');
-    const selects = document.querySelectorAll('select');
-
-    let resultSelect;
-    selects.forEach(elem => {
-        elem.addEventListener('change', ()=>{
-            resultSelect = elem.value;
-        })
-    })
-
-    btn.forEach(btn =>{
-        btn.addEventListener('click', ()=>{
-            if(resultSelect != undefined){
-                reservation.classList.add('showForm');
-                for(const formCarText of formCarTexts){
-                    if(formCarText.dataset.id == btn.dataset.id){
-                        document.getElementById('car').value = formCarText.textContent + ',' + ' ' + resultSelect;
-                    }
-                }
-            }else{
-                alert('Выберите цену!')
-            }
-       })
-    })
-    close.addEventListener('click',()=>{
-        reservation.classList.remove('showForm');
-    })
-}
-
-showForm();
-
 function deliveryChoice(){
     const btnPlace = document.querySelectorAll('.btnPlace');
     const formGroups = document.querySelectorAll('#blockPlace');
     
+    function getLocalStorage(){
+        const get = JSON.parse(localStorage.getItem('feedback')) || [];
+        document.getElementById('car').value = get.name + ',' + ' ' + get.price;
+    }
+    getLocalStorage();
+
     
     btnPlace.forEach(elem => {
         elem.addEventListener('click', ()=>{

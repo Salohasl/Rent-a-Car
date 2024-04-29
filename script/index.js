@@ -45,7 +45,7 @@ function autoUnloading(){
                         <option value="${keyAuto.price3}">${keyAuto.price3}</option>
                         <option value="${keyAuto.price4}">${keyAuto.price4}</option>
                     </select>
-                    <button class="show-form" data-id="${keyAuto.id}">Забронировать</button>
+                    <a href="feedback/index.html"><button class="show-form" data-id="${keyAuto.id}">Забронировать</button></a>
                     <a href="auto/index.html"><button class="more" data-id="${keyAuto.id}">Подробнее</button></a>
                 </div>
             `;
@@ -70,6 +70,45 @@ function autoUnloading(){
 }   
 
 autoUnloading();
+
+
+
+function locarStorage() {
+    const showForm = document.querySelectorAll('.show-form');
+    const selects = document.querySelectorAll('select');
+    const formCarTexts = document.querySelectorAll('.form-car');
+    let resultSelect;
+    selects.forEach(elem => {
+        elem.addEventListener('change', ()=>{
+            resultSelect = elem.value;
+        })
+    })
+    showForm.forEach(btn => {
+        btn.addEventListener('click', (event) => {
+            if(resultSelect == '' || resultSelect == undefined){
+                event.preventDefault();
+                alert('Пожалуйста, выберите цену')
+            }else{
+                for(const formCarText of formCarTexts){
+                    if(formCarText.dataset.id == btn.dataset.id){
+                        const formObj = {
+                            name: formCarText.textContent,
+                            price: resultSelect
+                        }
+
+                        localStorage.setItem('feedback', JSON.stringify(formObj));
+                    }
+                }
+                
+            }   
+        });
+    });
+}
+
+locarStorage();
+
+
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -117,3 +156,4 @@ document.addEventListener('DOMContentLoaded', function () {
         loadMoreButton.style.display = 'block';
     });
 });
+

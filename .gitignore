@@ -1,1 +1,4 @@
-script/catalog.js
+.end/
+doc/**/*.txt
+catalog.js
+feedback/logs/

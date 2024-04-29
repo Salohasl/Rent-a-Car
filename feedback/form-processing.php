@@ -96,32 +96,22 @@ if (!empty($_POST['email'])) {
   $data['errors']['email'] = 'Заполните это поле.';
   itc_log('Не заполнено поле email.');
 }
-
-// валидация message
-if (!empty($_POST['message'])) {
-  $data['form']['message'] = htmlspecialchars($_POST['message']);
-  if (mb_strlen($data['form']['message'], 'UTF-8') < 20) {
-    $data['result'] = 'error';
-    $data['errors']['message'] = 'Это поле должно быть не меньше 20 cимволов.';
-    itc_log('Поле message должно быть не меньше 20 cимволов.');
-  }
-} else {
-  $data['result'] = 'error';
-  $data['errors']['message'] = 'Заполните это поле.';
-  itc_log('Не заполнено поле message.');
+// валидация авто и цена
+if (isset($_POST['car'])) {
+  $data['form']['car'] = htmlspecialchars($_POST['car']);
 }
-
-
-// валидация agree
-if ($_POST['agree'] == 'true') {
-  $data['form']['agree'] = true;
-} else {
-  $data['result'] = 'error';
-  $data['errors']['agree'] = 'Необходимо установить этот флажок.';
-  itc_log('Не установлен флажок для поля agree.');
+// валидация доставка
+if (isset($_POST['delivery'])) {
+  $data['form']['delivery'] = htmlspecialchars($_POST['delivery']);
 }
-
-
+// валидация в офис
+if (isset($_POST['receiving'])) {
+  $data['form']['receiving'] = htmlspecialchars($_POST['receiving']);
+}
+// валидация checkbox
+if (isset($_POST['checkbox'])) {
+  $data['form']['checkbox'] = htmlspecialchars($_POST['checkbox']);
+}
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -134,8 +124,8 @@ require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 if ($data['result'] == 'success' && HAS_SEND_EMAIL == true) {
   // получаем содержимое email шаблона и заменяем в нём
   $template = file_get_contents(dirname(__FILE__) . '/template/email.tpl');
-  $search = ['%subject%', '%name%', '%phone%', '%email%', '%message%', '%date%'];
-  $replace = [EMAIL_SETTINGS['subject'], $data['form']['name'], $data['form']['phone'], $data['form']['email'], $data['form']['message'], date('d.m.Y H:i')];
+  $search = ['%subject%', '%name%', '%phone%', '%email%', '%car%', '%delivery%', '%receiving%', '%checkbox%','%date%'];
+  $replace = [EMAIL_SETTINGS['subject'], $data['form']['name'], $data['form']['phone'], $data['form']['email'], $data['form']['car'], $data['form']['delivery'], $data['form']['receiving'], $data['form']['checkbox'], date('d.m.Y H:i')];
   $body = str_replace($search, $replace, $template);
   // добавление файлов в виде ссылок
   if (HAS_ATTACH_IN_BODY && count($attachs)) {
@@ -218,7 +208,10 @@ if ($data['result'] == 'success' && HAS_WRITE_TXT) {
   $output .= 'Имя: ' . $data['form']['name'] . PHP_EOL;
   $output .= 'Телефон: ' . isset($data['form']['phone']) ? $data['form']['phone'] : 'не указан' . PHP_EOL;
   $output .= 'Email: ' . $data['form']['email'] . PHP_EOL;
-  $output .= 'Сообщение: ' . $data['form']['message'] . PHP_EOL;
+  $output .= 'Авто и цена: ' . $data['form']['car'] . PHP_EOL;
+  $output .= 'Доставка к адресу: ' . $data['form']['delivery'] . PHP_EOL;
+  $output .= 'Авто в офисе: ' . $data['form']['receiving'] . PHP_EOL;
+  $output .= 'Доп. опции: ' . $data['form']['checkbox'] . PHP_EOL;
   if (count($attachs)) {
     $output .= 'Файлы:' . PHP_EOL;
     foreach ($attachs as $attach) {

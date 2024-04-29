@@ -70,28 +70,10 @@ $attachs = [];
 
 /* 4 ЭТАП - ВАЛИДАЦИЯ ДАННЫХ (ЗНАЧЕНИЙ ПОЛЕЙ ФОРМЫ) */
 
-// валидация name
-if (!empty($_POST['name'])) {
-  $data['form']['name'] = htmlspecialchars($_POST['name']);
-} else {
-  $data['result'] = 'error';
-  $data['errors']['name'] = 'Заполните это поле.';
-  itc_log('Не заполнено поле name.');
-}
-
 // валидация телефона
 if (isset($_POST['phone'])) {
   $data['form']['phone'] = htmlspecialchars($_POST['phone']);
 }
-// валидация agree
-if ($_POST['agree'] == 'true') {
-  $data['form']['agree'] = true;
-} else {
-  $data['result'] = 'error';
-  $data['errors']['agree'] = 'Необходимо установить этот флажок.';
-  itc_log('Не установлен флажок для поля agree.');
-}
-
 
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -105,8 +87,8 @@ require '../vendor/phpmailer/phpmailer/src/SMTP.php';
 if ($data['result'] == 'success' && HAS_SEND_EMAIL) {
   // получаем содержимое email шаблона и заменяем в нём
   $template = file_get_contents('../template/email.tpl');
-  $search = ['%subject%', '%name%', '%phone%', '%date%'];
-  $replace = [EMAIL_SETTINGS['subject'], $data['form']['name'], $data['form']['phone'], date('d.m.Y H:i')];
+  $search = ['%subject%', '%phone%', '%date%'];
+  $replace = [EMAIL_SETTINGS['subject'], $data['form']['phone'], date('d.m.Y H:i')];
   $body = str_replace($search, $replace, $template);
   // добавление файлов в виде ссылок
   if (HAS_ATTACH_IN_BODY && count($attachs)) {
@@ -181,7 +163,6 @@ if ($data['result'] == 'success' && HAS_SEND_NOTIFICATION) {
 
 if ($data['result'] == 'success' && HAS_WRITE_TXT) {
   $output = '=======' . date('d.m.Y H:i') . '=======';
-  $output .= 'Имя: ' . $data['form']['name'] . PHP_EOL;
   $output .= 'Телефон: ' . isset($data['form']['phone']) ? $data['form']['phone'] : 'не указан' . PHP_EOL;
   if (count($attachs)) {
     $output .= 'Файлы:' . PHP_EOL;

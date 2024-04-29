@@ -9,9 +9,26 @@ export default  [
         "price2":"5-9 суток 7500р",
         "price3":"10-31 суток 7000р",
         "price4":"от 31 суток - 6500р",
+        //Фото на главной странице
         "src": "/img/bmw/bmw.jpg",
         "srcHover": "/img/bmw/bmwHover.jpg",
+        /*--------------------------------- */
         "description":"Родстер-Кабриолет",
+        //Фото в слайдере в разделе подробнее
+        "img1": "/img/bmw/bmw2.jpg",
+        "img2": "/img/bmw/bmw3.jpg",
+        "img3": "/img/bmw/bmw4.jpg",
+        "img4": "",
+        "img5": "",
+        "img6": "",
+        "img7": "",
+        "img8": "",
+        "img9": "",
+        "img10": "",
+        /*--------------------------------- */
+        "text": "Какое то очень большое большое описание ааааааа ааааааааа ааааааааа аааааа аааааааа",
+        //Комплектация
+        "comp": "Электрорегулировка зеркал, Электростеклоподъемники",
     },
     {   
         "id": "2",
@@ -23,9 +40,26 @@ export default  [
         "price2":"5-9 суток 3400р",
         "price3":"10-31 суток 3300р",
         "price4":"от 31 суток - 3200р",
+        //Фото на главной странице
         "src": "/img/toyota-corolla/toyota.jpg",
         "srcHover": "/img/toyota-corolla/toyotaHover.jpg",
+        /*----------------------------------------- */
         "description":"Минивэн",
+        //Фото в слайдере в разделе подробнее
+        "img1": "/img/toyota-corolla/toyota2.jpg",
+        "img2": "/img/toyota-corolla/toyota3.jpg",
+        "img3": "/img/toyota-corolla/toyota4.jpg",
+        "img4": "/img/toyota-corolla/toyota5.jpg",
+        "img5": "/img/toyota-corolla/toyota6.jpg",
+        "img6": "/img/toyota-corolla/toyota7.jpg",
+        "img7": "",
+        "img8": "",
+        "img9": "",
+        "img10": "",
+        /*----------------------------------------- */
+        "text": "Какое то очень большое большое описание аааааааа ааааааааааааа аааааааааа аааааааа",
+        //Комплектация
+        "comp": "Парктроники задние, Электрорегулировка зеркал, Электростеклоподъемники, Бортовой компьютер, Климат-контроль",
     },
     {   
         "id": "3",
@@ -40,6 +74,19 @@ export default  [
         "src": "/img/kia/kia.jpg",
         "srcHover": "/img/kia/kiaHover.jpg",
         "description":"Седан",
+        "img1": "/img/kia/kia2.jpg",
+        "img2": "/img/kia/kia3.jpg",
+        "img3": "",
+        "img4": "",
+        "img5": "",
+        "img6": "",
+        "img7": "",
+        "img8": "",
+        "img9": "",
+        "img10": "",
+        "text": "Какое то очень большое большое описание аааааааа ааааааааааааааа аааааааа аааааааа",
+        //Комплектация
+        "comp": "Подогрев руля, Электрорегулировка зеркал, Электростеклоподъемники, Бортовой компьютер",
     },
     {   
         "id": "4",
@@ -54,7 +101,19 @@ export default  [
         "src": "/img/nissan/nissan.jpg",
         "srcHover": "/img/nissan/nissanHover.jpg",
         "description":"Хэтчбек",
-       
+        "img1": "/img/nissan/nissan2.jpg",
+        "img2": "/img/nissan/nissan3.jpg",
+        "img3": "",
+        "img4": "",
+        "img5": "",
+        "img6": "",
+        "img7": "",
+        "img8": "",
+        "img9": "",
+        "img10": "",
+        "text": "Какое то очень большое большое описание аааааааааа аааааааа аааааааааа ааааааааааа",
+        //Комплектация
+        "comp": "Парктроники задние, Электрорегулировка зеркал, Электростеклоподъемники, Бортовой компьютер",
     },
     {   
         "id": "5",
@@ -69,6 +128,19 @@ export default  [
         "src": "/img/Nissan-Note/note.jpg",
         "srcHover": "/img/Nissan-Note/noteHover.jpg",
         "description":"Хэтчбек",
+        "img1": "/img/Nissan-Note/note2.jpg",
+        "img2": "/img/Nissan-Note/note3.jpg",
+        "img3": "",
+        "img4": "",
+        "img5": "",
+        "img6": "",
+        "img7": "",
+        "img8": "",
+        "img9": "",
+        "img10": "",
+        "text": "Какое то очень большое большое описание ааааааа аааааааааа аааааааа ааааа ааааааааа",
+        //Комплектация
+        "comp": "Парктроники задние, Электрорегулировка зеркал, Электростеклоподъемники, Бортовой компьютер",
     },
     {   
         "id": "6",
@@ -83,5 +155,18 @@ export default  [
         "src": "/img/shkoda/skoda.jpg",
         "srcHover": "/img/shkoda/skodaHover.jpg",
         "description":"Седан",
+        "img1": "/img/shkoda/skoda2.jpg",
+        "img2": "/img/shkoda/skoda3.jpg",
+        "img3": "/img/shkoda/skoda4.jpg",
+        "img4": "",
+        "img5": "",
+        "img6": "",
+        "img7": "",
+        "img8": "",
+        "img9": "",
+        "img10": "",
+        "text": "Какое то очень большое большое описание ааааааа ааааааааааа ааааааааааааааа аааааа",
+        //Комплектация
+        "comp": "Бортовой компьютер, Электрорегулировка зеркал, Электростеклоподъемники",
     }
 ]

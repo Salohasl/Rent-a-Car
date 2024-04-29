@@ -79,53 +79,9 @@ if (!empty($_POST['name'])) {
   itc_log('Не заполнено поле name.');
 }
 
-// валидация email
-if (!empty($_POST['email'])) {
-  $data['form']['email'] = $_POST['email'];
-  if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    $data['result'] = 'error';
-    $data['errors']['email'] = 'Email не корректный.';
-    itc_log('Email не корректный.');
-  }
-} else {
-  $data['result'] = 'error';
-  $data['errors']['email'] = 'Заполните это поле.';
-  itc_log('Не заполнено поле email.');
-}
-
-// валидация message
-if (!empty($_POST['message'])) {
-  $data['form']['message'] = htmlspecialchars($_POST['message']);
-  if (mb_strlen($data['form']['message'], 'UTF-8') < 20) {
-    $data['result'] = 'error';
-    $data['errors']['message'] = 'Это поле должно быть не меньше 20 cимволов.';
-    itc_log('Поле message должно быть не меньше 20 cимволов.');
-  }
-} else {
-  $data['result'] = 'error';
-  $data['errors']['message'] = 'Заполните это поле.';
-  itc_log('Не заполнено поле message.');
-}
-
-// проверка капчи
-if (HAS_CHECK_CAPTCHA) {
-  session_start();
-  if ($_POST['captcha'] === $_SESSION['captcha-1']) {
-    $data['form']['captcha'] = $_POST['captcha'];
-  } else {
-    $data['result'] = 'error';
-    $data['errors']['captcha'] = 'Код не соответствует изображению.';
-    itc_log('Не пройдена капча. Указанный код ' . $_POST['captcha'] . ' не соответствует ' . $_SESSION['captcha']);
-  }
-}
-
-// валидация agree
-if ($_POST['agree'] == 'true') {
-  $data['form']['agree'] = true;
-} else {
-  $data['result'] = 'error';
-  $data['errors']['agree'] = 'Необходимо установить этот флажок.';
-  itc_log('Не установлен флажок для поля agree.');
+// валидация телефона
+if (isset($_POST['phone'])) {
+  $data['form']['phone'] = htmlspecialchars($_POST['phone']);
 }
 
 // валидация прикреплённых файлов
@@ -181,8 +137,8 @@ require '../vendor/phpmailer/phpmailer/src/SMTP.php';
 if ($data['result'] == 'success' && HAS_SEND_EMAIL) {
   // получаем содержимое email шаблона и заменяем в нём
   $template = file_get_contents('../template/email.tpl');
-  $search = ['%subject%', '%name%', '%email%', '%message%', '%date%'];
-  $replace = [EMAIL_SETTINGS['subject'], $data['form']['name'], $data['form']['email'], $data['form']['message'], date('d.m.Y H:i')];
+  $search = ['%subject%', '%name%', '%phone%', '%date%'];
+  $replace = [EMAIL_SETTINGS['subject'], $data['form']['name'], $data['form']['phone'], date('d.m.Y H:i')];
   $body = str_replace($search, $replace, $template);
   // добавление файлов в виде ссылок
   if (HAS_ATTACH_IN_BODY && count($attachs)) {
@@ -258,8 +214,7 @@ if ($data['result'] == 'success' && HAS_SEND_NOTIFICATION) {
 if ($data['result'] == 'success' && HAS_WRITE_TXT) {
   $output = '=======' . date('d.m.Y H:i') . '=======';
   $output .= 'Имя: ' . $data['form']['name'] . PHP_EOL;
-  $output .= 'Email: ' . $data['form']['email'] . PHP_EOL;
-  $output .= 'Сообщение: ' . $data['form']['message'] . PHP_EOL;
+  $output .= 'Телефон: ' . isset($data['form']['phone']) ? $data['form']['phone'] : 'не указан' . PHP_EOL;
   if (count($attachs)) {
     $output .= 'Файлы:' . PHP_EOL;
     foreach ($attachs as $attach) {

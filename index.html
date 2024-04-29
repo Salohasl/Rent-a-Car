@@ -50,14 +50,14 @@
           <div class="messenger-act">
             <a href="https://t.me/#"><img class="iconMessenger" src="/icon/telegram.png"></a>
             <a href="#"><img class="iconMessenger" src="/icon/insta.png"></a>
-            <a href="#"><img class="iconMessenger" src="/icon/avito.png"></a>
+            <a href="https://www.avito.ru/user/a7b122d19e7c2c00b8a4dfabb6151931/profile"><img class="iconMessenger" src="/icon/avito.png"></a>
             <a href="viber://chat?number=%2B79527956805"><img class="iconMessenger" src="/icon/viber.png"></a>
           </div>
         </nav>
         <div class="messenger">
           <a href="https://t.me/#"><img class="iconMessenger" src="/icon/telegram.png"></a>
           <a href="#"><img class="iconMessenger" src="/icon/insta.png"></a>
-          <a href="#"><img class="iconMessenger" src="/icon/avito.png"></a>
+          <a href="https://www.avito.ru/user/a7b122d19e7c2c00b8a4dfabb6151931/profile"><img class="iconMessenger" src="/icon/avito.png"></a>
           <a href="viber://chat?number=%2B79527956805"><img class="iconMessenger" src="/icon/viber.png"></a>
         </div>
         <div class="menuBtn">
@@ -84,7 +84,7 @@
                 <br>  Оставьте номер телефона!</h3>
                 <p>Наш менеджер свяжется c Вами в течение 10 минут и мы подберем оптимальный вариант автомобиля</p>
               <!-- Форма обратной связи -->
-              <form id="feedback-form" action="/feedback/form-processing.php" enctype="multipart/form-data" novalidate>
+              <form id="feedback-form" action="/feedback/examples/form-processing-1.php" enctype="multipart/form-data" novalidate>
                 <div class="form-row">
                   <!-- Имя пользователя -->
                   <div class="form-group">
@@ -124,120 +124,6 @@
         
           </div>
        </div>
-
-
-      <div class="reservation">
-        <div class="reservation-title">
-          <div class="logo">
-            <a href="/index.html"><img src="/icon/logo.png" alt="" width="110px"></a>
-          </div>
-          <h3>Забронировать автомобиль</h3>
-          <div class="close">
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <hr>
-
-        <div class="form-container form__wrapper">
-          <!-- Форма обратной связи -->
-          <form id="form-1" action="/feedback/examples/form-processing-1.php" enctype="multipart/form-data" novalidate>
-            
-            <div class="form-row">
-              <!-- Имя пользователя -->
-              <div class="form-group">
-                <label for="name"><span>*</span>ФИО</label>
-                <input id="name" type="text" name="name" class="form-control" value="" placeholder="Иванов Иван Иванович" minlength="2"
-                  maxlength="30" required="required">
-                <div class="invalid-feedback"></div>
-              </div>
-              <!-- Email пользователя -->
-              <div class="form-group">
-                <label for="email" class="control-label"><span>*</span>Email-адрес</label>
-                <input id="email" type="email" name="email" required="required" class="form-control" value=""
-                  placeholder="pochta@mail.ru">
-                <div class="invalid-feedback"></div>
-              </div>
-                <!-- Телефон -->
-                <div class="form-group">
-                  <label for="phone"><span>*</span>Телефон для связи:</label>
-                  <input id="phone" type="tel" name="phone" class="form-control style_input phone_mask" placeholder="+7(999)999-99-99" value="" required="required" autocomplete="off">
-                  <div class="invalid-feedback"></div>
-                </div>
-                <!-- Автомобиль -->
-                <div class="form-group">
-                  <label id="carLabel" for="car">Ваш автомобиль и цена</label>
-                  <input id="car" type="text" name="car"  value="" placeholder="" minlength="2"
-                    maxlength="30" disabled>
-                </div>
-                <div class="place">
-                  <p><span>*</span>Место получения автомобиля:</p>
-                  <div class="place-button">
-                    <button type="button" class="btnPlace" data-place="delivery">Доставка</button>
-                    <button type="button" class="btnPlace" data-place="receiving">Отдача авто в офисе</button>
-                  </div>
-                </div>
-                
-                <!-- Доставка -->
-              <div class="form-group__del" id="blockPlace" data-place="delivery">
-                <label for="delivery"><span>*</span>Доставка авто:</label>
-                <input id="delivery" type="text" name="delivery" class="form-control" value="" placeholder="Адрес доставки" minlength="2"
-                  maxlength="30" required="required">
-                <div class="invalid-feedback"></div>
-              </div>
-
-               <!-- Получения авто в офисе -->
-               <div class="form-group__rec" id="blockPlace" data-place="receiving">
-                <label for="receiving">Получение авто по адресу:</label>
-                <input id="receiving" type="text" name="receiving" class="form-control" value="" placeholder="" minlength="2"
-                  maxlength="30" required="required" disabled> 
-                <div class="invalid-feedback"></div>
-              </div>
-
-
-              <div class="options">
-                <p>Дополнительные опции:</p>
-                <div class="options-group">
-                  <input type="checkbox" class="checkbox" name="" id="armchair" value="Детское кресло">
-                  <label for="armchair">Детское кресло</label>
-                </div>
-                <div class="options-group">
-                  <input type="checkbox" name="" class="checkbox" id="booster" value="Бустер">
-                  <label for="booster">Бустер</label>
-                </div>
-                <div class="options-group">
-                  <input type="checkbox" name="" class="checkbox" id="time" value="Дополнительные часы сверх аренды">
-                  <label for="time">Дополнительные часы сверх аренды</label>
-                </div>
-                <input id="checkbox" type="text" name="checkbox" class="form-control" value="" placeholder="" minlength="0"
-                  maxlength="30" style="display: none;"> 
-                  <div class="form-group">
-                    <input id="checkbox" type="text" name="checkbox" class="form-control" value="" placeholder="" minlength="0"
-                    maxlength="30" style="display: none;"> 
-                  </div>
-              </div>
-            </div>
-    
-    
-            <!-- Сообщение об ошибке -->
-            <div class="form-error form-error_hide" style="display: none;">Исправьте данные и отправьте форму ещё раз.</div>
-    
-            <!-- Кнопка для отправки формы на сервер -->
-            <div class="form-submit">
-              <button type="submit" id="submitForm">Забронировать авто</button>
-            </div>
-    
-          </form>
-    
-          <!-- Сообщение об успешной отправки формы -->
-          <div class="form-success form-success_hide" style="display: none;">
-            <div class="form-success__message">Форма успешно отправлена. Нажмите <button type="button"
-                class="form-success__btn">здесь</button>, если нужно отправить ещё одну форму.</div>
-          </div>
-    
-        </div>
-
-      </div>
 
 
       <div class="catalog" id="catalog" data-num="1">
@@ -497,7 +383,6 @@
 </script>
 <script type="module" src="/script/index.js"></script>
 <script type="module" src="/script/animation.js"></script>
-<script type="module" src="/script/reserved.js"></script>
 <script type="module" src="/script/locat.js"></script>
 <script src="/script/menu.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.js" integrity="sha512-bvxXT2u2PNVKMpHmLR54QQ+qAnhn0dM//5spHP+sjRcnlZSmNMaLkvZXAr8peMHyNlUoDEgNnYIlrUTnr5kNYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
